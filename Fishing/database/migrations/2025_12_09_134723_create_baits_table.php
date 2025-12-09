@@ -15,6 +15,10 @@ class CreateBaitsTable extends Migration
     {
         Schema::create('baits', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->text('descriptif')->nullable();
+            $table->decimal('prix', 8, 2);
+            $table->string('nomImg')->nullable();
             $table->timestamps();
         });
     }
