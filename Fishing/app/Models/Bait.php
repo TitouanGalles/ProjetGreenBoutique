@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Bait extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'Id',
+        'nom',
+        'descriptif',
+        'prix',
+        'nomImg'
+    ];
 }
