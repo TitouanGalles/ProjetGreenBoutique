@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\Bait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -137,3 +138,21 @@ class BaitController extends Controller
         return redirect('/backoffice');
     }
 }
+=======
+use Illuminate\Http\Request;
+
+class BaitController extends Controller
+{
+    public function baits()
+    {
+        return view('/baits/index');
+    }
+
+    public function show($id)
+    {
+        return view('baits.show', [
+            'bait' => Bait::find($id)
+        ]);
+    }
+}
+>>>>>>> 2307a6a79632e149c830e7a3c9cadd40f614407d
