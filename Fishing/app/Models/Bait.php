@@ -9,6 +9,8 @@ class Bait extends Model
 {
     use HasFactory;
 
+    protected $table = 'Leurre';
+
     protected $fillable = [
         'Id',
         'nom',
@@ -16,4 +18,10 @@ class Bait extends Model
         'prix',
         'nomImg'
     ];
+
+    protected $primaryKey = 'Id';
+
+    public $incrementing = false;
+
+    protected $keyType = 'int';
 }

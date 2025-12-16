@@ -13,8 +13,8 @@ class CreateBaitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('baits', function (Blueprint $table) {
-            $table->id();
+        Schema::create('Leurre', function (Blueprint $table) {
+            $table->integer('Id')->primary();
             $table->string('nom');
             $table->text('descriptif')->nullable();
             $table->decimal('prix', 8, 2);
@@ -30,6 +30,6 @@ class CreateBaitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('baits');
+        Schema::dropIfExists('Leurre');
     }
 }
